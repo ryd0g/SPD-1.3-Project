@@ -29,38 +29,29 @@ function Navbar() {
       </div>
       <div class='pull-right ml-auto'>
         <ul class='nav navbar-nav navbar-right'>
-          <li class='nav-item dropdown'>
+          <li class='nav-item navbar-right'>
             <a
-              class='nav-link dropdown-toggle'
-              href='http://example.com'
-              id='navbarDropdownMenuLink'
-              data-toggle='dropdown'
-              aria-haspopup='true'
-              aria-expanded='false'>
-              Login
+              className='nav-link'
+              activeClassName='nav-link-active'
+              to='/signup'>
+              Forecasts
             </a>
-            <div class='dropdown-menu'>
-              <form
-                class='form-horizontal'
-                method='post'
-                accept-charset='UTF-8'>
-                <input
-                  class='form-control login'
-                  type='text'
-                  name='username'
-                  placeholder='Username..'
-                />
-                <br />
-                <input
-                  class='form-control login'
-                  type='password'
-                  name='password'
-                  placeholder='Password..'
-                />
-                <br />
-                <button class='btn btn-dark'>Login</button>
-              </form>
-            </div>
+          </li>
+          <li class='nav-item navbar-right'>
+            <a
+              className='nav-link'
+              activeClassName='nav-link-active'
+              to='/signup'>
+              Alerts
+            </a>
+          </li>
+          <li class='nav-item navbar-right'>
+            <a
+              className='nav-link'
+              activeClassName='nav-link-active'
+              to='/signup'>
+              Historical Data
+            </a>
           </li>
           <li class='nav-item navbar-right'>
             <a
