@@ -5,6 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 library.add(fab, faGithub);
 
