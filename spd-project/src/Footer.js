@@ -15,17 +15,23 @@ function Footer() {
           target='blank'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a class='btn btn-social-icon btn-github' href='/' target='blank'>
+        <a
+          class='btn btn-social-icon btn-github'
+          href='https://github.com/guiisgooey'
+          target='blank'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
           class='btn btn-social-icon btn-github'
-          href='https://www.linkedin.com/in/ryan-jinwoo-lee/'
+          href='https://github.com/MaybeJaybe'
           target='blank'>
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a class='btn btn-social-icon btn-github' href='/' target='blank'>
-          <FontAwesomeIcon icon={faLinkedin} />
+        <a
+          class='btn btn-social-icon btn-github'
+          href='https://github.com/ashrajgrewal'
+          target='blank'>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
     </section>
