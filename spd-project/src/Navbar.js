@@ -5,7 +5,7 @@ import './Navbar.css';
 
 function Navbar() {
   return (
-    <nav class='navbar sticky-top navbar-expand navbar-dark bg-primary'>
+    <nav class='navbar sticky-top navbar-expand navbar-dark bg-dark'>
       <a class='navbar-brand' href='homepage.html'>
         Weather App
       </a>
