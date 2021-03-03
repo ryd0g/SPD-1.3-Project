@@ -22,19 +22,11 @@ const useGeolocate = () => {
 
         var dt = data.dt;
         const dateObj = new Date(dt * 1000);
-        var ampm = "AM";
-        var hours = dateObj.getHours();
-        if (hours >= 12) {
-          ampm = "PM";
-          if (hours > 12) {
-            hours = hours - 12;
-          }
-        }
-        const minutes = dateObj.getMinutes();
-        const seconds = dateObj.getSeconds();
-        const dateString = dateObj.toDateString();
-        setDate(dateString);
-        setTime(`${hours}:${minutes}:${seconds} ${ampm}`);
+
+        setDate(dateObj.toDateString());
+        setTime(
+          `${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`
+        );
 
         setLoading(false);
       });
