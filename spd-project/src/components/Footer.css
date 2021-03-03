@@ -1,9 +1,26 @@
+.footer {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  color: #e1daec;
+  background-color: #977ec1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.copyright {
+  padding: 1em 1em 0 1em;
+}
 .footer a {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  margin-left: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: white;
+  margin: 0 12px;
+  padding: 0 5px;
+  color: #e1daec;
+}
+.btn:hover {
+  color: #cabedd;
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none;
 }
