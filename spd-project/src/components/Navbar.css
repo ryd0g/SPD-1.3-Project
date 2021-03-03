@@ -1,7 +1,30 @@
+.navbar {
+  background-color: #977ec1;
+}
+.navbar a {
+  color: #e1daec;
+}
+.navbar:hover {
+  color: #d8ccec;
+}
 .dropdown-menu {
   width: 100px !important;
   padding: 8px;
   padding-right: 10px;
+  color: #977ec1;
+}
+.dropdown-item {
+  color: #977ec1;
+  background-color: white;
+}
+.dropdown-item:hover {
+  color: #977ec1;
+  background-color: #e1daec;
+  border: none;
+}
+.dropdown-item:active {
+  color: #e1daec;
+  background-color: #977ec1;
 }
 input {
   margin: 3px;
