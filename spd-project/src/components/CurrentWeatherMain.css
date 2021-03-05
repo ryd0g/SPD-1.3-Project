@@ -1,0 +1,13 @@
+#main-section {
+    display: grid;
+    grid-template-columns: fit-content(40%) fit-content(40%);
+    justify-content: center;
+    grid-gap: 30px;
+    border: 1px solid #7e7e7e;
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px -10px inset, -2px -2px 20px -10px inset;
+    margin: 50px;
+    padding: 100px 200px;
+    background: rgba(250, 250, 250, 0.098);
+    background-image: linear-gradient(#00ffd0ad, #ab7affc8);
+}
