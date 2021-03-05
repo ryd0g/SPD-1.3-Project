@@ -1,4 +1,6 @@
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import React, { useState, useEffect } from "react";
+import './CurrentWeatherAdvanced.css'
 
 const key = "57ec25fe836ff428fdaf3d0167c32f00";
 const k = 273.15;
@@ -47,75 +49,79 @@ export default () => {
   if (!error) {
     return (
       <>
-        <div class="weather-advanced-current-header">Advanced Statistics:</div>
-        <div class="weather-advanced-current">
-          {loading ? (
-            <div class="weather-advanced-fl">...loading</div>
-          ) : (
-            <div class="weather-advanced-fl">
-              Feels like: {Math.floor(data.main.feels_like - k)} ° C
+        <section id="advanced-section">
+          <div class="weather-advanced-current-header">Advanced Statistics:</div>
+          <div class="weather-advanced-list">
+            <div class="weather-advanced-current">
+              {loading ? (
+                <div class="weather-advanced-fl">...loading</div>
+              ) : (
+                <div class="weather-advanced-fl">
+                  Feels like: {Math.floor(data.main.feels_like - k)} ° C
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-high">...loading</div>
+              ) : (
+                <div class="weather-advanced-high">
+                  Temp High: {Math.floor(data.main.temp_max - k)}° C
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-low">...loading</div>
+              ) : (
+                <div class="weather-advanced-low">
+                  Temp Low: {Math.floor(data.main.temp_min - k)}° C
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-sunrise">...loading</div>
+              ) : (
+                <div class="weather-advanced-sunrise">Sunrise: {sunrise}</div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-sunset">...loading</div>
+              ) : (
+                <div class="weather-advanced-sunset">Sunset: {sunset}</div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-pressure">...loading</div>
+              ) : (
+                <div class="weather-advanced-pressure">
+                  Pressure: {data.main.pressure} inHg
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-humidity">...loading</div>
+              ) : (
+                <div class="weather-advanced-humidity">
+                  Humidity: {data.main.humidity}%
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-speed">...loading</div>
+              ) : (
+                <div class="weather-advanced-speed">
+                  Wind Speed: {data.wind.speed} km/h
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-deg">...loading</div>
+              ) : (
+                <div class="weather-advanced-deg">
+                  Wind Degree: {data.wind.deg}°
+                </div>
+              )}
+              {loading ? (
+                <div class="weather-advanced-visibility">...loading</div>
+              ) : (
+                <div class="weather-advanced-visibility">
+                  Visibility: {data.visibility} meters
+                </div>
+              )}
             </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-high">...loading</div>
-          ) : (
-            <div class="weather-advanced-high">
-              Temp High: {Math.floor(data.main.temp_max - k)}° C
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-low">...loading</div>
-          ) : (
-            <div class="weather-advanced-low">
-              Temp Low: {Math.floor(data.main.temp_min - k)}° C
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-sunrise">...loading</div>
-          ) : (
-            <div class="weather-advanced-sunrise">Sunrise: {sunrise}</div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-sunset">...loading</div>
-          ) : (
-            <div class="weather-advanced-sunset">Sunset: {sunset}</div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-pressure">...loading</div>
-          ) : (
-            <div class="weather-advanced-pressure">
-              Pressure: {data.main.pressure} inHg
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-humidity">...loading</div>
-          ) : (
-            <div class="weather-advanced-humidity">
-              Humidity: {data.main.humidity}%
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-speed">...loading</div>
-          ) : (
-            <div class="weather-advanced-speed">
-              Wind Speed: {data.wind.speed} km/h
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-deg">...loading</div>
-          ) : (
-            <div class="weather-advanced-deg">
-              Wind Degree: {data.wind.deg}°
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-advanced-visibility">...loading</div>
-          ) : (
-            <div class="weather-advanced-visibility">
-              Visibility: {data.visibility} meters
-            </div>
-          )}
-        </div>
+          </div>
+        </section>
       </>
     );
   } else {

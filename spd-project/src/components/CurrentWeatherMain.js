@@ -1,4 +1,6 @@
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 import React, { useState, useEffect } from "react";
+import './CurrentWeatherMain.css';
 
 const key = "57ec25fe836ff428fdaf3d0167c32f00";
 const k = 273.15;
@@ -43,47 +45,49 @@ export default () => {
   if (!error) {
     return (
       <>
-        <div class="weather-main-current-header">
-          {loading ? (
-            <div class="weather-main-date">...loading</div>
-          ) : (
-            <div class="weather-main-date">{date}</div>
-          )}
-        </div>
-        <div class="weather-main-current">
-          {loading ? (
-            <div class="weather-main-locat">...loading</div>
-          ) : (
-            <div class="weather-main-locat">
-              {data.name}, {data.sys.country}
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-main-dt">...loading</div>
-          ) : (
-            <div class="weather-main-dt">{time}</div>
-          )}
-          {loading ? (
-            <div class="weather-main-temp">...loading</div>
-          ) : (
-            <div class="weather-main-temp">
-              {Math.floor(data.main.temp - k)}° C
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-main-temp-hilo">...loading</div>
-          ) : (
-            <div class="weather-main-temp-hilo">
-              {Math.floor(data.main.temp_max - k)}° C /
-              {Math.floor(data.main.temp_min - k)}° C
-            </div>
-          )}
-          {loading ? (
-            <div class="weather-main-desc">...loading</div>
-          ) : (
-            <div class="weather-main-desc">{data.weather[0].description}</div>
-          )}
-        </div>
+        <section id="main-section">
+          <div class="weather-main-current-header">
+            {loading ? (
+              <div class="weather-main-date">...loading</div>
+            ) : (
+              <div class="weather-main-date">{date}</div>
+            )}
+          </div>
+          <div class="weather-main-current">
+            {loading ? (
+              <div class="weather-main-locat">...loading</div>
+            ) : (
+              <div class="weather-main-locat">
+                {data.name}, {data.sys.country}
+              </div>
+            )}
+            {loading ? (
+              <div class="weather-main-dt">...loading</div>
+            ) : (
+              <div class="weather-main-dt">{time}</div>
+            )}
+            {loading ? (
+              <div class="weather-main-temp">...loading</div>
+            ) : (
+              <div class="weather-main-temp">
+                {Math.floor(data.main.temp - k)}° C
+              </div>
+            )}
+            {loading ? (
+              <div class="weather-main-temp-hilo">...loading</div>
+            ) : (
+              <div class="weather-main-temp-hilo">
+                {Math.floor(data.main.temp_max - k)}° C /
+                {Math.floor(data.main.temp_min - k)}° C
+              </div>
+            )}
+            {loading ? (
+              <div class="weather-main-desc">...loading</div>
+            ) : (
+              <div class="weather-main-desc">{data.weather[0].description}</div>
+            )}
+          </div>
+        </section>
       </>
     );
   } else {
